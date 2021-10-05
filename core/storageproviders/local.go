@@ -5,8 +5,8 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/core/transcoder"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/core/transcoder"
 )
 
 // LocalStorage represents an instance of the local storage provider for HLS video.

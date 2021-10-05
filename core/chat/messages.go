@@ -1,8 +1,8 @@
 package chat
 
 import (
-	"github.com/owncast/owncast/core/chat/events"
-	"github.com/owncast/owncast/core/webhooks"
+	"github.com/dolfly/owncast/core/chat/events"
+	"github.com/dolfly/owncast/core/webhooks"
 	log "github.com/sirupsen/logrus"
 )
 

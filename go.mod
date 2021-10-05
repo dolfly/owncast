@@ -1,4 +1,4 @@
-module github.com/owncast/owncast
+module github.com/dolfly/owncast
 
 go 1.17
 

@@ -11,9 +11,9 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/utils"
 )
 
 var _timer *time.Ticker

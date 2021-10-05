@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 
 	"github.com/markbates/pkger"
-	"github.com/owncast/owncast/router/middleware"
+	"github.com/dolfly/owncast/router/middleware"
 	log "github.com/sirupsen/logrus"
 )
 

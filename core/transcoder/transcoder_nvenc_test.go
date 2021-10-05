@@ -3,7 +3,7 @@ package transcoder
 import (
 	"testing"
 
-	"github.com/owncast/owncast/models"
+	"github.com/dolfly/owncast/models"
 	"path/filepath"
 )
 

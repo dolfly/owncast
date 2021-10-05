@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/utils"
 	"github.com/teris-io/shortid"
 
 	log "github.com/sirupsen/logrus"

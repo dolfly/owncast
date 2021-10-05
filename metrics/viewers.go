@@ -3,7 +3,7 @@ package metrics
 import (
 	"time"
 
-	"github.com/owncast/owncast/core"
+	"github.com/dolfly/owncast/core"
 )
 
 // How often we poll for updates.

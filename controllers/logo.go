@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/utils"
-	"github.com/owncast/owncast/webroot"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/utils"
+	"github.com/dolfly/owncast/webroot"
 	log "github.com/sirupsen/logrus"
 )
 

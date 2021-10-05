@@ -1,8 +1,8 @@
 package core
 
 import (
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/core/storageproviders"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/core/storageproviders"
 )
 
 func setupStorage() error {

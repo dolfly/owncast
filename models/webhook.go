@@ -3,7 +3,7 @@ package models
 import (
 	"time"
 
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/utils"
 )
 
 // Webhook is an event that is sent to 3rd party, external services with details about something that took place within an Owncast server.

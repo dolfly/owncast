@@ -7,11 +7,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/core"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/router/middleware"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/core"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/router/middleware"
+	"github.com/dolfly/owncast/utils"
 )
 
 // HandleHLSRequest will manage all requests to HLS content.

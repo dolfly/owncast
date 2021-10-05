@@ -3,7 +3,7 @@ package models
 import (
 	"time"
 
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/utils"
 )
 
 // Stats holds the stats for the system.

@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/models"
-	"github.com/owncast/owncast/utils"
-	"github.com/owncast/owncast/webroot"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/models"
+	"github.com/dolfly/owncast/utils"
+	"github.com/dolfly/owncast/webroot"
 	log "github.com/sirupsen/logrus"
 )
 

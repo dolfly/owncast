@@ -10,12 +10,12 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"github.com/owncast/owncast/core/chat/events"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/core/user"
-	"github.com/owncast/owncast/core/webhooks"
-	"github.com/owncast/owncast/geoip"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/core/chat/events"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/core/user"
+	"github.com/dolfly/owncast/core/webhooks"
+	"github.com/dolfly/owncast/geoip"
+	"github.com/dolfly/owncast/utils"
 )
 
 var _server *Server

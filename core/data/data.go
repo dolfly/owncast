@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/utils"
 	log "github.com/sirupsen/logrus"
 )
 

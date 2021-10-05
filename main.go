@@ -6,15 +6,15 @@ import (
 	"strconv"
 
 	"github.com/markbates/pkger"
-	"github.com/owncast/owncast/logging"
+	"github.com/dolfly/owncast/logging"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/core"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/metrics"
-	"github.com/owncast/owncast/router"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/core"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/metrics"
+	"github.com/dolfly/owncast/router"
+	"github.com/dolfly/owncast/utils"
 )
 
 func main() {

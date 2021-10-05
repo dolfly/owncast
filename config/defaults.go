@@ -1,6 +1,6 @@
 package config
 
-import "github.com/owncast/owncast/models"
+import "github.com/dolfly/owncast/models"
 
 // Defaults will hold default configuration values.
 type Defaults struct {

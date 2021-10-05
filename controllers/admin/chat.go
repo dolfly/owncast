@@ -9,11 +9,11 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/owncast/owncast/controllers"
-	"github.com/owncast/owncast/core/chat"
-	"github.com/owncast/owncast/core/chat/events"
-	"github.com/owncast/owncast/core/user"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/controllers"
+	"github.com/dolfly/owncast/core/chat"
+	"github.com/dolfly/owncast/core/chat/events"
+	"github.com/dolfly/owncast/core/user"
+	"github.com/dolfly/owncast/utils"
 	log "github.com/sirupsen/logrus"
 )
 

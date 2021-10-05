@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/owncast/owncast/controllers"
-	"github.com/owncast/owncast/core/user"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/controllers"
+	"github.com/dolfly/owncast/core/user"
+	"github.com/dolfly/owncast/utils"
 )
 
 type deleteExternalAPIUserRequest struct {

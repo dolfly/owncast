@@ -1,8 +1,8 @@
 package data
 
 import (
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/models"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/models"
 )
 
 // HasPopulatedDefaults will determine if the defaults have been inserted into the database.
@@ -35,7 +35,7 @@ func PopulateDefaults() {
 	_ = SetSocialHandles([]models.SocialHandle{
 		{
 			Platform: "github",
-			URL:      "https://github.com/owncast/owncast",
+			URL:      "https://github.com/dolfly/owncast",
 		},
 	})
 

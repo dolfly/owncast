@@ -1,7 +1,7 @@
 package transcoder
 
 import (
-	"github.com/owncast/owncast/models"
+	"github.com/dolfly/owncast/models"
 )
 
 // HLSHandler gets told about available HLS playlists and segments.

@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/core/playlist"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/core/playlist"
+	"github.com/dolfly/owncast/utils"
 	log "github.com/sirupsen/logrus"
 
 	"github.com/aws/aws-sdk-go/aws"
@@ -16,7 +16,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 
-	"github.com/owncast/owncast/config"
+	"github.com/dolfly/owncast/config"
 
 	"github.com/grafov/m3u8"
 )

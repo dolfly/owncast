@@ -11,7 +11,7 @@ import (
 	"time"
 
 	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/utils"
 	"github.com/rifflock/lfshook"
 	"github.com/sirupsen/logrus"
 	logger "github.com/sirupsen/logrus"

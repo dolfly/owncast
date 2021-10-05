@@ -13,7 +13,7 @@ import (
 	"github.com/yuin/goldmark/renderer/html"
 	"mvdan.cc/xurls"
 
-	"github.com/owncast/owncast/core/user"
+	"github.com/dolfly/owncast/core/user"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -7,8 +7,8 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/models"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/models"
 )
 
 var l = &sync.RWMutex{}

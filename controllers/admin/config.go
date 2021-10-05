@@ -11,13 +11,13 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/controllers"
-	"github.com/owncast/owncast/core/chat"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/core/user"
-	"github.com/owncast/owncast/models"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/controllers"
+	"github.com/dolfly/owncast/core/chat"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/core/user"
+	"github.com/dolfly/owncast/models"
+	"github.com/dolfly/owncast/utils"
 	log "github.com/sirupsen/logrus"
 )
 

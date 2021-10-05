@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/owncast/owncast/core/chat/events"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/core/user"
-	"github.com/owncast/owncast/core/webhooks"
+	"github.com/dolfly/owncast/core/chat/events"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/core/user"
+	"github.com/dolfly/owncast/core/webhooks"
 	log "github.com/sirupsen/logrus"
 )
 

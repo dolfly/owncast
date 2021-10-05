@@ -11,8 +11,8 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/nareix/joy5/format/rtmp"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/models"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/models"
 )
 
 var (

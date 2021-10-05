@@ -10,12 +10,12 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/owncast/owncast/core"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/models"
-	"github.com/owncast/owncast/router/middleware"
-	"github.com/owncast/owncast/utils"
-	"github.com/owncast/owncast/webroot"
+	"github.com/dolfly/owncast/core"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/models"
+	"github.com/dolfly/owncast/router/middleware"
+	"github.com/dolfly/owncast/utils"
+	"github.com/dolfly/owncast/webroot"
 )
 
 // MetadataPage represents a server-rendered web page for bots and web scrapers.

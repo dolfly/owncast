@@ -3,8 +3,8 @@ package admin
 import (
 	"net/http"
 
-	"github.com/owncast/owncast/controllers"
-	"github.com/owncast/owncast/core/data"
+	"github.com/dolfly/owncast/controllers"
+	"github.com/dolfly/owncast/core/data"
 	log "github.com/sirupsen/logrus"
 )
 

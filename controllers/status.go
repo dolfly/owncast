@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/owncast/owncast/core"
-	"github.com/owncast/owncast/router/middleware"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/core"
+	"github.com/dolfly/owncast/router/middleware"
+	"github.com/dolfly/owncast/utils"
 )
 
 // GetStatus gets the status of the server.

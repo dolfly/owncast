@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/owncast/owncast/config"
-	"github.com/owncast/owncast/core/data"
-	"github.com/owncast/owncast/core/transcoder"
-	"github.com/owncast/owncast/models"
-	"github.com/owncast/owncast/utils"
+	"github.com/dolfly/owncast/config"
+	"github.com/dolfly/owncast/core/data"
+	"github.com/dolfly/owncast/core/transcoder"
+	"github.com/dolfly/owncast/models"
+	"github.com/dolfly/owncast/utils"
 	log "github.com/sirupsen/logrus"
 )
 

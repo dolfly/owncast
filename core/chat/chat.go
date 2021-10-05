@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"sort"
 
-	"github.com/owncast/owncast/core/chat/events"
-	"github.com/owncast/owncast/models"
+	"github.com/dolfly/owncast/core/chat/events"
+	"github.com/dolfly/owncast/models"
 	log "github.com/sirupsen/logrus"
 )
 
