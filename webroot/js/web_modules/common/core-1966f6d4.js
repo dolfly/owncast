@@ -1,4 +1,4 @@
-import { b as getDefaultExportFromNamespaceIfNotNamed, a as commonjsGlobal, c as createCommonjsModule } from './_commonjsHelpers-37fa8da4.js';
+import { b as getDefaultExportFromNamespaceIfNotNamed, a as commonjsGlobal, c as createCommonjsModule } from './commonjsHelpers-37fa8da4.js';
 
 var _nodeResolve_empty = {};
 

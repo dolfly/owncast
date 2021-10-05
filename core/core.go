@@ -79,15 +79,7 @@ func Start() error {
 }
 
 func createInitialOfflineState() error {
-	// Provide default files
-	if !utils.DoesFileExists(filepath.Join(config.WebRoot, "thumbnail.jpg")) {
-		if err := utils.Copy("static/logo.png", filepath.Join(config.WebRoot, "thumbnail.jpg")); err != nil {
-			return err
-		}
-	}
-
 	transitionToOfflineVideoStreamContent()
-
 	return nil
 }
 
@@ -98,21 +90,14 @@ func transitionToOfflineVideoStreamContent() {
 	log.Traceln("Firing transcoder with offline stream state")
 
 	offlineFilename := "offline.ts"
-	offlineFilePath := "static/" + offlineFilename
+	offlineFilePath := filepath.Join(config.DataDirectory, offlineFilename)
 	_transcoder := transcoder.NewTranscoder()
 	_transcoder.SetInput(offlineFilePath)
 	_transcoder.SetIdentifier("offline")
 	_transcoder.Start()
 
-	// Copy the logo to be the thumbnail
-	logo := data.GetLogoPath()
-	err := utils.Copy(filepath.Join("data", logo), "webroot/thumbnail.jpg")
-	if err != nil {
-		log.Warnln(err)
-	}
-
 	// Delete the preview Gif
-	_ = os.Remove(path.Join(config.WebRoot, "preview.gif"))
+	_ = os.Remove(path.Join(config.DataDirectory, "preview.gif"))
 }
 
 func resetDirectories() {
@@ -124,7 +109,7 @@ func resetDirectories() {
 	// Remove the previous thumbnail
 	logo := data.GetLogoPath()
 	if utils.DoesFileExists(logo) {
-		err := utils.Copy(path.Join("data", logo), filepath.Join(config.WebRoot, "thumbnail.jpg"))
+		err := utils.Copy(path.Join(config.DataDirectory, logo), filepath.Join(config.DataDirectory, "thumbnail.jpg"))
 		if err != nil {
 			log.Warnln(err)
 		}

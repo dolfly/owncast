@@ -1,6 +1,6 @@
 module github.com/owncast/owncast
 
-go 1.14
+go 1.17
 
 require (
 	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
@@ -18,7 +18,6 @@ require (
 	github.com/mssola/user_agent v0.5.3
 	github.com/mvdan/xurls v1.1.0 // indirect
 	github.com/nareix/joy5 v0.0.0-20200712071056-a55089207c88
-	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/oschwald/geoip2-golang v1.5.0
 	github.com/rifflock/lfshook v0.0.0-20180920164130-b9218ef580f5
 	github.com/schollz/sqlite3dump v1.3.0
@@ -30,7 +29,17 @@ require (
 	golang.org/x/mod v0.5.1
 	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
 	golang.org/x/time v0.0.0-20201208040808-7e3f01d25324
-	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	mvdan.cc/xurls v1.1.0
+)
+
+require (
+	github.com/aymerick/douceur v0.2.0 // indirect
+	github.com/gobuffalo/here v0.6.0 // indirect
+	github.com/gorilla/css v1.0.0 // indirect
+	github.com/jmespath/go-jmespath v0.4.0 // indirect
+	github.com/oschwald/maxminddb-golang v1.8.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/tklauser/numcpus v0.2.2 // indirect
+	golang.org/x/net v0.0.0-20210614182718-04defd469f4e // indirect
 )

@@ -50,8 +50,8 @@ func StartThumbnailGenerator(chunkPath string, variantIndex int) {
 
 func fireThumbnailGenerator(segmentPath string, variantIndex int) error {
 	// JPG takes less time to encode than PNG
-	outputFile := path.Join(config.WebRoot, "thumbnail.jpg")
-	previewGifFile := path.Join(config.WebRoot, "preview.gif")
+	outputFile := path.Join(config.DataDirectory, "thumbnail.jpg")
+	previewGifFile := path.Join(config.DataDirectory, "preview.gif")
 
 	framePath := path.Join(segmentPath, strconv.Itoa(variantIndex))
 	files, err := ioutil.ReadDir(framePath)
@@ -83,7 +83,7 @@ func fireThumbnailGenerator(segmentPath string, variantIndex int) error {
 
 	mostRecentFile := path.Join(framePath, names[0])
 	ffmpegPath := utils.ValidatedFfmpegPath(data.GetFfMpegPath())
-	outputFileTemp := path.Join(config.WebRoot, "tempthumbnail.jpg")
+	outputFileTemp := path.Join(config.DataDirectory, "tempthumbnail.jpg")
 
 	thumbnailCmdFlags := []string{
 		ffmpegPath,

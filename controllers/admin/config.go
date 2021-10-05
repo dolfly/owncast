@@ -11,6 +11,7 @@ import (
 	"reflect"
 	"strings"
 
+	"github.com/owncast/owncast/config"
 	"github.com/owncast/owncast/controllers"
 	"github.com/owncast/owncast/core/chat"
 	"github.com/owncast/owncast/core/data"
@@ -222,7 +223,7 @@ func SetLogo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	imgPath := filepath.Join("data", "logo"+extension)
+	imgPath := filepath.Join(config.DataDirectory, "logo"+extension)
 	if err := ioutil.WriteFile(imgPath, bytes, 0600); err != nil {
 		controllers.WriteSimpleResponse(w, false, err.Error())
 		return

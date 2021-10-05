@@ -4,20 +4,18 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"os"
-	"path"
 	"path/filepath"
 	"strings"
 	"text/template"
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/owncast/owncast/config"
 	"github.com/owncast/owncast/core"
 	"github.com/owncast/owncast/core/data"
 	"github.com/owncast/owncast/models"
 	"github.com/owncast/owncast/router/middleware"
 	"github.com/owncast/owncast/utils"
+	"github.com/owncast/owncast/webroot"
 )
 
 // MetadataPage represents a server-rendered web page for bots and web scrapers.
@@ -55,26 +53,18 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// If this is a directory listing request then return a 404
-	info, err := os.Stat(path.Join(config.WebRoot, r.URL.Path))
-	if err != nil || (info.IsDir() && !isIndexRequest) {
-		w.WriteHeader(http.StatusNotFound)
-		return
-	}
-
 	// Set a cache control max-age header
 	middleware.SetCachingHeaders(w, r)
 
 	// Set our global HTTP headers
 	middleware.SetHeaders(w)
-
-	http.ServeFile(w, r, path.Join(config.WebRoot, r.URL.Path))
+	http.FileServer(http.FS(webroot.FS)).ServeHTTP(w, r)
 }
 
 // Return a basic HTML page with server-rendered metadata from the config file
 // to give to Opengraph clients and web scrapers (bots, web crawlers, etc).
 func handleScraperMetadataPage(w http.ResponseWriter, r *http.Request) {
-	tmpl := template.Must(template.ParseFiles(path.Join("static", "metadata.html")))
+	tmpl := template.Must(template.ParseFS(webroot.FS, "*.html"))
 
 	scheme := "http"
 
@@ -95,9 +85,9 @@ func handleScraperMetadataPage(w http.ResponseWriter, r *http.Request) {
 
 	status := core.GetStatus()
 
-	// If the thumbnail does not exist or we're offline then just use the logo image
+	// we're offline then just use the logo image
 	var thumbnailURL string
-	if status.Online && utils.DoesFileExists(filepath.Join(config.WebRoot, "thumbnail.jpg")) {
+	if status.Online {
 		thumbnail, err := url.Parse(fmt.Sprintf("%s://%s%s", scheme, r.Host, "/thumbnail.jpg"))
 		if err != nil {
 			log.Errorln(err)
@@ -122,7 +112,7 @@ func handleScraperMetadataPage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "text/html")
-	if err := tmpl.Execute(w, metadata); err != nil {
+	if err := tmpl.ExecuteTemplate(w, "metadata.html", metadata); err != nil {
 		log.Panicln(err)
 	}
 }

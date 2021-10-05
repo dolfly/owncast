@@ -20,10 +20,15 @@ var emojiCacheTimestamp time.Time
 
 // getCustomEmojiList returns a list of custom emoji either from the cache or from the emoji directory.
 func getCustomEmojiList() []models.CustomEmoji {
-	fullPath := filepath.Join(config.WebRoot, config.EmojiDir)
+	fullPath := filepath.Join(config.DataDirectory, config.EmojiDir)
 	emojiDirInfo, err := os.Stat(fullPath)
 	if err != nil {
-		log.Errorln(err)
+		if os.IsNotExist(err) {
+			os.MkdirAll(fullPath, 0700)
+		} else {
+			log.Errorln(err)
+		}
+		return []models.CustomEmoji{}
 	}
 	if emojiDirInfo.ModTime() != emojiCacheTimestamp {
 		log.Traceln("Emoji cache invalid")

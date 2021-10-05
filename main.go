@@ -43,8 +43,8 @@ func main() {
 	}
 
 	// Create the data directory if needed
-	if !utils.DoesFileExists("data") {
-		if err := os.Mkdir("./data", 0700); err != nil {
+	if !utils.DoesFileExists(config.DataDirectory) {
+		if err := os.Mkdir(config.DataDirectory, 0700); err != nil {
 			log.Fatalln("Cannot create data directory", err)
 		}
 	}

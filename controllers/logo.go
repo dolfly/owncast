@@ -1,14 +1,13 @@
 package controllers
 
 import (
-	"io/ioutil"
 	"net/http"
 	"path/filepath"
 	"strconv"
 
-	"github.com/owncast/owncast/config"
 	"github.com/owncast/owncast/core/data"
 	"github.com/owncast/owncast/utils"
+	"github.com/owncast/owncast/webroot"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -54,9 +53,9 @@ func GetCompatibleLogo(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Otherwise use a fallback logo.png.
-	imagePath := filepath.Join(config.WebRoot, "img", "logo.png")
+	imagePath := filepath.Join("img", "logo.png")
 	contentType := "image/png"
-	imageBytes, err := getImage(imagePath)
+	imageBytes, err := webroot.FS.ReadFile(imagePath)
 	if err != nil {
 		returnDefault(w)
 		return
@@ -73,7 +72,7 @@ func GetCompatibleLogo(w http.ResponseWriter, r *http.Request) {
 }
 
 func returnDefault(w http.ResponseWriter) {
-	imagePath := filepath.Join(config.WebRoot, "img", "logo.svg")
+	imagePath := filepath.Join("img", "logo.svg")
 	imageBytes, err := getImage(imagePath)
 	if err != nil {
 		log.Errorln(err)
@@ -94,5 +93,5 @@ func writeBytesAsImage(data []byte, contentType string, w http.ResponseWriter, c
 }
 
 func getImage(path string) ([]byte, error) {
-	return ioutil.ReadFile(path) // nolint
+	return webroot.FS.ReadFile(path)
 }

@@ -85,7 +85,7 @@ func SetStreamAsDisconnected() {
 	_broadcaster = nil
 
 	offlineFilename := "offline.ts"
-	offlineFilePath := "static/" + offlineFilename
+	offlineFilePath := filepath.Join(config.DatabaseFilePath, offlineFilename)
 
 	transcoder.StopThumbnailGenerator()
 	rtmp.Disconnect()

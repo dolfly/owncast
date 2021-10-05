@@ -1,4 +1,4 @@
-import { a as commonjsGlobal, b as getDefaultExportFromNamespaceIfNotNamed, c as createCommonjsModule } from '../common/_commonjsHelpers-37fa8da4.js';
+import { a as commonjsGlobal, b as getDefaultExportFromNamespaceIfNotNamed, c as createCommonjsModule } from '../common/commonjsHelpers-37fa8da4.js';
 
 var win;
 
